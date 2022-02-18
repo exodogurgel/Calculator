@@ -1,0 +1,247 @@
+ /*
+ background-color: #696fec;background-image: linear-gradient(191deg, #696fec 0%, #191a39 8%, #3e418b 60%, #696fec 94%);
+ */
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family:sans-serif;
+}
+
+.container {
+    width: 17.5rem;
+    height: 37.5rem;
+    background-color: #696fec;
+    background-image: linear-gradient(190deg, #696fec 0%, #191a39 3%, #191a39 30%, #3e418b 70%, #696fec 100%);
+    border-radius: 1.875rem;
+    color: #fff;
+    position: relative;
+    box-shadow: 0.375rem 0.375rem 0.313rem black;
+}
+
+.container .display {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    scroll-snap-align: end;
+    color: #838181;
+    font-size:1.25rem;
+    width:13.125rem;
+    position: absolute;
+    top: 7.5rem;
+    left:2.188rem;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.output {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top:10rem;
+    width:13.125rem;
+    font-size: 2.188rem;
+    left:2.188rem;
+    overflow-y: hidden;
+	overflow-x: scroll;
+}
+.display-cover::-webkit-scrollbar,
+.output::-webkit-scrollbar {
+	width: 19.2rem;
+	height: 0.2rem;
+}
+::-webkit-scrollbar-track {
+	background: #191A39;
+}
+::-webkit-scrollbar-thumb {
+	background: #333333;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #a6a6a6;
+	cursor: pointer; /* Not Working */
+}
+
+
+ .row {
+     display: flex;
+     color: #fff;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.625rem;
+     position: relative;
+ }
+
+ #main {
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding-bottom: 1.875rem;
+ }
+
+ .smallButtons {
+     width:2.625rem;
+     height: 1.688rem;
+     background-color: #303136;
+     font-size:0.875rem;
+     margin: 0.5rem;
+     border-radius:3.125rem;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     user-select: none;
+     box-shadow: 0.188rem 0.188rem 0.313rem black;
+ }
+
+ .button-grey {
+    width:2.625rem;
+    height: 2.625rem;
+    background-color: #616161;
+    margin:0.375rem 0.5rem;
+    border-radius:0.625rem;
+    font-size: 1.125rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0.188rem 0.188rem 0.313rem black;
+ }
+
+ .button.operators {
+     width:2.625rem;
+     height: 2.625rem;
+     background-color: #595FD9;
+     margin:0.375rem 0.5rem;
+     border-radius:0.625rem;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     user-select: none;
+     box-shadow: 0.188rem 0.188rem 0.313rem black;
+ }
+
+ .button-black {
+     width:2.625rem;
+     height: 2.625rem;
+     background-color: #303136;
+     margin:0.375rem 0.5rem;
+     border-radius:0.625rem;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     user-select: none;
+     box-shadow: 0.188rem 0.188rem 0.313rem black;
+ }
+
+
+ /* Colocando animação de botão acionado */
+ .button-black:active, #equal:active, .button.operators:active {
+     font-size: 1.5rem;
+     box-shadow: inset -0.125rem -0.125rem 0.313rem transparent, inset 0.375rem 0.375rem 0.313rem rgba(0, 0, 0, 0.4); 
+ }
+
+ .button-grey:active{
+    font-size: 1.063rem;
+    box-shadow: inset -0.125rem -0.125rem 0.313rem transparent, inset 0.375rem 0.375rem 0.313rem rgba(0, 0, 0, 0.4);
+ }
+
+.smallButtons:active {
+    font-size: 0.813rem;
+    box-shadow: inset -0.125rem -0.125rem 0.313rem transparent, inset 0.375rem 0.375rem 0.313rem rgba(0, 0, 0, 0.4);
+}
+
+.button-black:active, #equal:active, .button-grey:active, .smallButtons:active, .button.operators:active  {
+    outline: none;
+    outline-style: none;
+}
+
+
+ .button-black.g {
+     width:6.25rem;
+     margin:0.5rem;
+ }
+
+
+ .button.operators.g {
+     position: absolute;
+     height:4.313rem;
+     right:1.5rem;
+     top:0px;
+     margin:0.375rem 0.5rem;
+     z-index: 1;
+ }
+
+
+.row.end {
+    justify-content: flex-start;
+    margin-left:1.5rem;
+}
+
+.row.on {
+    justify-content: flex-start;
+    margin-left:1.5rem;
+}
+
+#equal {
+    background-color: #595FD9;
+    margin:0.375rem 0.5rem;
+    border-radius:0.625rem;
+    width:2.625rem;
+    box-shadow: 0.188rem 0.188rem 0.313rem black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+
+    position: absolute;
+    right:1.5rem;
+    top:1.813rem;
+    height: 4.313rem;
+    z-index: 1;
+}
+
+#equal:hover{
+    background-color: #757bf1;
+}
+
+.smallButtons:hover, .button-black:hover{
+    background-color: #3d3f44;
+ }
+
+.button-grey:hover {
+    background-color: #777777;
+}
+
+.button.operators:hover {
+    background-color: #757bf1;
+}
+
+
+@media (max-width: 500px) {
+    body{
+        position: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    html {
+        font-size: 1.3em;
+    }
+}
