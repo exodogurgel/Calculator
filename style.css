@@ -263,5 +263,9 @@ body {
         justify-content: flex-end;
 	scroll-snap-align: end;
     }
+	
+    body {
+        zoom: 1.3;
+    }
     
 }
