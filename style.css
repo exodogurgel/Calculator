@@ -261,6 +261,7 @@ body {
     .output {
         display: flex;
         justify-content: end;
+	scroll-snap-align: end;
     }
     
 }
