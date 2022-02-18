@@ -250,5 +250,17 @@ body {
     .button.operators:hover {
         background-color: #595FD9;
     }
+	
+    .container .display {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        scroll-snap-align: end;
+    }
+
+    .output {
+        display: flex;
+        justify-content: end;
+    }
     
 }
