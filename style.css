@@ -235,13 +235,20 @@ body {
 
 
 @media (max-width: 500px) {
-    body{
-        position: flex;
-        justify-content: center;
-        align-items: center;
+    #equal:hover{
+        background-color: #595FD9;
     }
-
-    html {
-        font-size: 1.3em;
+    
+    .smallButtons:hover, .button-black:hover{
+        background-color: #303136;
+     }
+    
+    .button-grey:hover {
+        background-color: #303136;
     }
+    
+    .button.operators:hover {
+        background-color: #595FD9;
+    }
+    
 }
