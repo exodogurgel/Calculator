@@ -264,7 +264,7 @@ body {
 	scroll-snap-align: end;
     }
 	
-    body {
+    .container {
         zoom: 1.3;
     }
     
